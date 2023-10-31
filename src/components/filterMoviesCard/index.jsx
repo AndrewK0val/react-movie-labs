@@ -26,6 +26,11 @@ export default function FilterMoviesCard(props) {
     {id: 3, name: "Thriller"}
   ]
 
+  const handleChange = (e, type, value) => {
+    e.preventDefault()
+    props.onUserInput(type, value)   // NEW
+  }
+
   return (
     <Card 
       sx={{

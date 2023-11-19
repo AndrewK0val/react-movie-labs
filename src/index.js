@@ -4,11 +4,11 @@ import { BrowserRouter, Route, Navigate, Routes } from "react-router-dom"
 import HomePage from "./pages/homePage"
 import MoviePage from "./pages/movieDetailsPage"
 import { QueryClientProvider, QueryClient } from "react-query"
-import MovieReviewPage from "./pages/movieReviewPage";
+import MovieReviewPage from "./pages/movieReviewPage"
 import SiteHeader from './components/siteHeader'
 import FavoriteMoviesPage from "./pages/favoriteMoviesPage"
 import { ReactQueryDevtools } from 'react-query/devtools'
-import MoviesContextProvider from "./contexts/moviesContext";
+import MoviesContextProvider from "./contexts/moviesContext"
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -17,7 +17,7 @@ const queryClient = new QueryClient({
       refetchOnWindowFocus: false
     },
   },
-});
+})
 
 const App = () => {
   return (
@@ -37,8 +37,8 @@ const App = () => {
       </BrowserRouter>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
-  );
-};
+  )
+}
 
 const rootElement = createRoot( document.getElementById("root") )
-rootElement.render(<App />);
+rootElement.render(<App />)
